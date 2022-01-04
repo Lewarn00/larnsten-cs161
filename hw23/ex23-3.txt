@@ -1,0 +1,16 @@
+Lewis Arnsten
+
+We begin by splitting on a:
+
+[a := T] = (T V B) -> ⊥ -> B
+		 = B -> ⊥ -> B
+		 = B -> T
+		 = T
+
+And T is the ultimate tautology
+
+[a := ⊥] = (⊥ V B) -> T -> B
+		 = B -> T -> B
+		 = B -> B
+
+And B -> B is a familiar tautology

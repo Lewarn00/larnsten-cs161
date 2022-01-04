@@ -1,0 +1,11 @@
+Lewis Arnsten
+
+Prove: (a -> B) -> (B -> g) -> (a -> g)
+1. a -> B, Hypothesis
+2. B -> g, Hypothesis
+3. a, Assumption
+4. B, Modus ponens 1 3
+5. g, Modus ponens 2 4
+6. a -> g, Modus ponens 3 5
+
+This has a similar type to the function: flip (.)

@@ -1,0 +1,19 @@
+-- Lewis Arnsten
+-- Exercise 17.1 
+
+-- This is the start point.
+char :: Char -> Parser Char
+char c = satisfy (c==)
+
+-- Getting rid of the infix operator.
+char :: Char -> Parser Char
+char c = satisfy ((==) c)
+
+-- Creates a function composition.
+char :: Char -> Parser Char
+char c = (satisfy . (==)) c
+
+-- Eta reducing the function.
+char :: Char -> Parser Char
+char = satisfy . (==)
+

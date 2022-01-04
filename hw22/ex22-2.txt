@@ -1,0 +1,20 @@
+Lewis Arnsten
+Exercise 22.2
+
+mySumL [1..4]
+==> mySumL (enumFromTo 1 4) -- desugar [..]
+==> mySumL.iter 0 (enumFromTo 1 4) -- expand mySumL
+==> mySumL.iter 0 (1: enumFromTo 2 4) -- expand enumFromTo
+==> mySumL.iter (0 + 1) (enumFromTo 2 4) -- expand mySumL.iter
+==> mySumL.iter 1 (enumFromTo 2 4) -- evaluate sum
+==> mySumL.iter 1 (2: enumFromTo 3 4) -- expand enumFromTo
+==> mySumL.iter (1 + 2) (enumFromTo 3 4) -- expand mySumL.iter
+==> mySumL.iter 3 (enumFromTo 3 4) -- evaluate sum
+==> mySumL.iter 3 (3: enumFromTo 4 4) -- expand enumFromTo
+==> mySumL.iter (3 + 3) (enumFromTo 4 4) -- expand mySumL.iter
+==> mySumL.iter 6 (enumFromTo 4 4) -- evaluate sum
+==> mySumL.iter 6 [4] -- expand enumFromTo
+==> mySumL.iter 6 (4:[]) -- desugar cons
+==> mySumL.iter (6 + 4) [] -- expand mySumL.iter
+==> mySumL.iter 10 [] -- evaluate sum
+==> 10 -- pattern match mySumL

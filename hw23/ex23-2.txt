@@ -1,0 +1,4 @@
+Lewis Arnsten
+
+The formula we proved is similar to:
+either :: (a -> c) -> (b -> c) -> Either a b -> c
